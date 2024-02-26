@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="mt-4">
+        <h5 id="add-member-title">Details</h5>
+    </div>
+
+    <div class="card col-md-12">
+        <div class="card-body">
+            <h5 class="card-title">Model.Name</h5>
+            <h6 class="card-subtitle mb-3 text-muted">Model.JoinDate</h6>
+            <p class="card-text">Model.MembershipPlan</p>
+            <p class="card-text">Model.Email</p>
+            <p class="card-text">Model.PhoneNumber</p>
+
+            <div class="d-flex justify-content-end col-md-12">
+                <a class="btn btn-warning" id="edit-member-btn" href="@Url.Action("EditMember", "Members")">Edit Member</a>
+                <a class="btn btn-danger ml-2" id="delete-member-btn" href="@Url.Action("AddMember", "Members")">Delete Member</a>
+            </div>
+        </div>
+    </div>
+</div>
