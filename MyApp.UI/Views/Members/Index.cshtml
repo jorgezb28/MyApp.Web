@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<MyApp.UI.Models.MemberModel>
+
+@{
     ViewData["Title"] = "Members";
 }
 
@@ -25,15 +27,17 @@
             </tr>
         </thead>
         <tbody>
-            @*Foreach Model*@
-            <tr>
-                <td class="text-center">1</td>
-                <td class="text-center">Model.Name</td>
-                <td class="text-center">Model.MembershipPlan</td>
-                <td class="text-center">
-                    <a class="btn btn btn-info" id="view-details-btn" href="@Url.Action("ViewDetails", "Members")">Details</a>
-                </td>
-            </tr>
+            @foreach (var member in Model)
+            {
+                <tr>
+                    <td class="text-center">@member.Id</td>
+                    <td class="text-center">@member.Name</td>
+                    <td class="text-center">@member.MembershipPlan.Name</td>
+                    <td class="text-center">
+                        <a class="btn btn btn-info" id="view-details-btn" href="@Url.Action("ViewDetails", "Members")">Details</a>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

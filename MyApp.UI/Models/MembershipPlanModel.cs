@@ -1,6 +1,6 @@
 ﻿namespace MyApp.UI.Models
 {
-    public class MembershipPlan
+    public class MembershipPlanModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
